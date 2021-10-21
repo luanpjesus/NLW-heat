@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Luan Jesus - DoWhile 2021 - NLW Heat</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="selo rocketsets" />
+          </span>
+          <img
+            src="http://lorempixel.com/185/185/people/"
+            alt="imagem pessoal"
+          />
+        </div>
+
+        <h1 id="userName">Luan Jesus</h1>
+        <a href="https://github.com/maykbrito" target="_blank">
+          <img src="images/github 2.svg" alt="icone github" />
+          maykbrito</a
+        >
+
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com" target="_blank">
+              <img
+                src="images/youtube.svg"
+                alt="icone youtube"
+                target="_blank"
+              />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com" target="_blank">
+              <img
+                src="images/facebook.svg"
+                alt="icone facebook"
+                target="_blank"
+              />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="images/instragram.svg"
+                alt="icone instagram"
+                target="_blank"
+              />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="images/twitter.svg" alt="icone twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script>
+      function showMeSomething(texto) {
+        //variável texto
+        ///A variavel const github que recebe o valor "luanpjesus" é atribuida a outra váriavel na função SHOWMESOMETHING, (TEXTO), E QUANDO A FUNÇÃO É CHAMADA LA EMBAIXO, COM O links.github, a informação primária que é "luanpjesus", passa por todas essas "caixas até chegar à função alert"
+        alert(texto)
+      }
+      const linksSocialMedia = {
+        github: 'luanpjesus',
+        youtube: 'UCEjnGIsgvAZSfr4rixUTVEw ',
+        facebook: 'luan.mfdp',
+        instagram: 'luanpjesus ',
+        twitter: '_luanjjesus '
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
+  </body>
+</html>
